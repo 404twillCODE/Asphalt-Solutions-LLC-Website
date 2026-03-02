@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-asphalt-black text-gray-100 antialiased;
+}
+
+/* Mobile: tap delay removal and safe areas for notched devices */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+@media (hover: none) {
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Facebook embed: fill container and keep layout clean */
+.fb-page {
+  width: 100%;
+  min-width: 340px;
+}
+.fb-page span,
+.fb-page iframe {
+  width: 100% !important;
+  max-width: 500px !important;
+  min-height: 500px !important;
+}
