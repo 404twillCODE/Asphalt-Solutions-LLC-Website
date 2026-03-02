@@ -74,7 +74,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-asphalt-black via-asphalt-black to-gray-900/50" />
       <div className="relative z-10 text-center max-w-2xl w-full">
         <div className="opacity-0 animate-fade-up mb-6 sm:mb-8" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <img src="/Logo.jpg" alt="Asphalt Solutions LLC" className="w-full max-w-[280px] sm:max-w-md mx-auto rounded-lg shadow-2xl" />
+          <img src={`${import.meta.env.BASE_URL}Logo.jpg`} alt="Asphalt Solutions LLC" className="w-full max-w-[280px] sm:max-w-md mx-auto rounded-lg shadow-2xl" />
         </div>
         <p className="text-gray-400 text-base sm:text-lg opacity-0 animate-fade-up mb-4 sm:mb-6 px-1" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
           Proudly serving CNY with professional asphalt sealcoating & repairs.
