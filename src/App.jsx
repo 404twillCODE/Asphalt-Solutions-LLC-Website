@@ -1,4 +1,9 @@
 import { useEffect, useState } from 'react'
+import logoImage from '../images/Logo.jpg'
+import sealcoatingImage from '../images/sealcoating.jpeg'
+import crackFillingImage from '../images/Crack filling.jpeg'
+import asphaltRepairImage from '../images/Asphalt repair.jpeg'
+import snowPlowingImage from '../images/Snow plowing.jpeg'
 
 const PHONE = '(315) 795-5214'
 const PHONE_RAW = '3157955214'
@@ -10,8 +15,7 @@ function Nav() {
 
   const navLinks = [
     { href: '#services', label: 'Services' },
-    { href: '#contact', label: 'Contact' },
-    { href: '#posts', label: 'Updates' },
+    { href: '#contact', label: 'Free estimate form' },
   ]
 
   const closeMenu = () => setMenuOpen(false)
@@ -71,25 +75,25 @@ function Nav() {
 function Hero() {
   return (
     <section id="home" className="min-h-[100dvh] min-h-screen flex flex-col items-center justify-center relative px-4 sm:px-6 pt-20 pb-12 sm:pt-24 sm:pb-16">
-      <div className="absolute inset-0 bg-gradient-to-b from-asphalt-black via-asphalt-black to-gray-900/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-neutral-900" />
       <div className="relative z-10 text-center max-w-2xl w-full">
         <div className="opacity-0 animate-fade-up mb-6 sm:mb-8" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <img src={`${import.meta.env.BASE_URL}Logo.jpg`} alt="Asphalt Solutions LLC" className="w-full max-w-[280px] sm:max-w-md mx-auto rounded-lg shadow-2xl" />
+          <img src={logoImage} alt="Asphalt Solutions LLC" className="w-full max-w-[280px] sm:max-w-md mx-auto rounded-lg shadow-2xl" />
         </div>
-        <p className="text-gray-400 text-base sm:text-lg opacity-0 animate-fade-up mb-4 sm:mb-6 px-1" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-          Proudly serving CNY with professional asphalt sealcoating & repairs.
+        <p className="text-gray-200 text-base sm:text-lg opacity-0 animate-fade-up mb-4 sm:mb-6 px-1" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+          Sealcoating, crack filling, asphalt repair, and snow plowing in CNY.
         </p>
-        <p className="text-asphalt-metal text-sm opacity-0 animate-fade-up mb-6 sm:mb-8" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
+        <p className="text-gray-400 text-sm opacity-0 animate-fade-up mb-6 sm:mb-8" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
           Text or call for a free estimate!
         </p>
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 opacity-0 animate-fade-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-          <a href={`tel:${PHONE_RAW}`} className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-asphalt-silver text-asphalt-black px-6 py-3.5 rounded-lg font-semibold hover:bg-white transition-all active:scale-[0.98] touch-manipulation">
+          <a href={`tel:${PHONE_RAW}`} className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3.5 rounded-lg font-semibold hover:bg-neutral-200 transition-all active:scale-[0.98] touch-manipulation">
             <span className="text-lg">📲</span> {PHONE}
           </a>
-          <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center gap-2 border border-asphalt-silver/40 text-asphalt-silver px-6 py-3.5 rounded-lg font-medium hover:bg-asphalt-silver/10 transition-all touch-manipulation">
+          <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center gap-2 border border-white/40 text-white px-6 py-3.5 rounded-lg font-medium hover:bg-white/10 transition-all touch-manipulation">
             Facebook
           </a>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center gap-2 border border-asphalt-silver/40 text-asphalt-silver px-6 py-3.5 rounded-lg font-medium hover:bg-asphalt-silver/10 transition-all touch-manipulation">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center gap-2 border border-white/40 text-white px-6 py-3.5 rounded-lg font-medium hover:bg-white/10 transition-all touch-manipulation">
             Instagram
           </a>
         </div>
@@ -99,29 +103,66 @@ function Hero() {
 }
 
 function Services() {
-  const items = [
-    { title: 'Sealcoating', desc: 'Protect and extend the life of your asphalt with professional sealcoating.', delay: '0.1s' },
-    { title: 'Repairs', desc: 'Crack filling, pothole repair, and surface restoration.', delay: '0.2s' },
-    { title: 'Free Estimates', desc: 'Text or call for a no-obligation quote. Serving Central New York.', delay: '0.3s' },
-  ]
   return (
-    <section id="services" className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-gray-900/50 to-asphalt-black">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-asphalt-silver mb-3 sm:mb-4 opacity-0 animate-fade-up" style={{ animationFillMode: 'forwards' }}>What We Do</h2>
+    <section id="services" className="py-16 sm:py-24 px-4 sm:px-6 bg-neutral-950">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 opacity-0 animate-fade-up" style={{ animationFillMode: 'forwards' }}>Services</h2>
         <p className="text-gray-400 mb-8 sm:mb-12 text-sm sm:text-base opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-          Professional asphalt services for driveways, parking lots, and more.
+          Residential and commercial work with clean, professional results.
         </p>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-          {items.map((item, i) => (
-            <div
-              key={item.title}
-              className="p-5 sm:p-6 rounded-xl border border-white/10 bg-white/5 hover:bg-white/[0.08] hover:border-asphalt-silver/30 transition-all duration-300 opacity-0 animate-fade-up"
-              style={{ animationDelay: item.delay, animationFillMode: 'forwards' }}
-            >
-              <h3 className="text-base sm:text-lg font-semibold text-asphalt-silver mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.desc}</p>
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-4">
+          <div
+            className="rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 shadow-xl opacity-0 animate-fade-up"
+            style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}
+          >
+            <div className="relative aspect-[3/5]">
+              <img src={sealcoatingImage} alt="Residential sealcoating" className="w-full h-full object-cover" />
+              <div className="absolute inset-x-3 bottom-3">
+                <div className="inline-block bg-black/80 text-white text-sm font-semibold px-3 py-1 rounded-md">
+                  Sealcoating
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
+          <div
+            className="rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 shadow-xl opacity-0 animate-fade-up"
+            style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
+          >
+            <div className="relative aspect-[3/5]">
+              <img src={asphaltRepairImage} alt="Commercial sealcoating and line striping" className="w-full h-full object-cover" />
+              <div className="absolute inset-x-3 bottom-3">
+                <div className="inline-block bg-black/80 text-white text-sm font-semibold px-3 py-1 rounded-md">
+                  Asphalt repair
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 shadow-xl opacity-0 animate-fade-up"
+            style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
+          >
+            <div className="relative aspect-[3/5]">
+              <img src={crackFillingImage} alt="Crack filling" className="w-full h-full object-cover" />
+              <div className="absolute inset-x-3 bottom-3">
+                <div className="inline-block bg-black/80 text-white text-sm font-semibold px-3 py-1 rounded-md">
+                  Crack Filling
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 shadow-xl opacity-0 animate-fade-up"
+            style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
+          >
+            <div className="relative aspect-[3/5]">
+              <img src={snowPlowingImage} alt="Snow plowing" className="w-full h-full object-cover" />
+              <div className="absolute inset-x-3 bottom-3">
+                <div className="inline-block bg-black/80 text-white text-sm font-semibold px-3 py-1 rounded-md">
+                  Snow Plowing
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -131,53 +172,127 @@ function Services() {
 function Contact() {
   return (
     <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6">
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-asphalt-silver mb-3 sm:mb-4 opacity-0 animate-fade-up" style={{ animationFillMode: 'forwards' }}>Get Your Free Estimate</h2>
-        <p className="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-          Reach out by phone or follow us on social media.
-        </p>
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 opacity-0 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <a href={`tel:${PHONE_RAW}`} className="min-h-[48px] inline-flex items-center justify-center text-asphalt-silver font-semibold text-lg hover:text-white transition-colors touch-manipulation">{PHONE}</a>
-          <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center text-asphalt-silver hover:text-white transition-colors touch-manipulation">Facebook</a>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center text-asphalt-silver hover:text-white transition-colors touch-manipulation">Instagram</a>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function FacebookFeed() {
-  useEffect(() => {
-    if (typeof window.FB !== 'undefined') {
-      window.FB.XFBML.parse()
-    }
-  }, [])
-
-  return (
-    <section id="posts" className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-asphalt-black to-gray-900/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-[1fr,500px] gap-8 sm:gap-12 lg:gap-16 items-start">
-          <div className="lg:pt-2 text-center lg:text-left">
-            <h2 className="text-2xl sm:text-3xl font-bold text-asphalt-silver mb-2 sm:mb-3 opacity-0 animate-fade-up" style={{ animationFillMode: 'forwards' }}>Latest from Facebook</h2>
-            <p className="text-gray-400 mb-0 text-sm sm:text-base opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-              Updates, photos, and news from Asphalt Solutions LLC.
-            </p>
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-asphalt-silver mb-3 sm:mb-4 opacity-0 animate-fade-up" style={{ animationFillMode: 'forwards' }}>Get Your Free Estimate</h2>
+          <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+            Call, message us on social, or send your info and we&apos;ll reach out.
+          </p>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 opacity-0 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <a href={`tel:${PHONE_RAW}`} className="min-h-[48px] inline-flex items-center justify-center text-asphalt-silver font-semibold text-lg hover:text-white transition-colors touch-manipulation">{PHONE}</a>
+            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center text-asphalt-silver hover:text-white transition-colors touch-manipulation">Facebook</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="min-h-[48px] inline-flex items-center justify-center text-asphalt-silver hover:text-white transition-colors touch-manipulation">Instagram</a>
           </div>
-          <div className="opacity-0 animate-fade-up min-h-[400px] sm:min-h-[600px] flex justify-center lg:justify-end -mx-2 sm:mx-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <div className="w-full max-w-[500px] rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-xl">
-              <div
-                className="fb-page w-full [&>span]:!block [&>span]:!w-full [&>iframe]:!w-full [&>iframe]:!max-w-[500px]"
-                data-href={FACEBOOK_URL}
-                data-tabs="timeline"
-                data-width="500"
-                data-height="700"
-                data-small-header="true"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="false"
+        </div>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 shadow-xl opacity-0 animate-fade-up" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+          <form className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-asphalt-silver mb-1">
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  className="w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-asphalt-silver placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-asphalt-silver/60 focus:border-asphalt-silver/60"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-asphalt-silver mb-1">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  className="w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-asphalt-silver placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-asphalt-silver/60 focus:border-asphalt-silver/60"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-asphalt-silver mb-1">
+                  Phone number
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  className="w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-asphalt-silver placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-asphalt-silver/60 focus:border-asphalt-silver/60"
+                  placeholder="Best number to reach you"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="address" className="block text-sm font-medium text-asphalt-silver mb-1">
+                  Address
+                </label>
+                <input
+                  id="address"
+                  name="address"
+                  type="text"
+                  className="w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-asphalt-silver placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-asphalt-silver/60 focus:border-asphalt-silver/60"
+                  placeholder="Service address"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="service" className="block text-sm font-medium text-asphalt-silver mb-1">
+                Service needed
+              </label>
+              <select
+                id="service"
+                name="service"
+                className="w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-asphalt-silver focus:outline-none focus:ring-2 focus:ring-asphalt-silver/60 focus:border-asphalt-silver/60"
+                defaultValue=""
+                required
+              >
+                <option value="" disabled>
+                  Select a service
+                </option>
+                <option value="Sealcoating">Sealcoating</option>
+                <option value="Crack filling">Crack filling</option>
+                <option value="Asphalt repair">Asphalt repair</option>
+                <option value="Snow plowing">Snow plowing</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-asphalt-silver mb-1">
+                Brief message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                className="w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-asphalt-silver placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-asphalt-silver/60 focus:border-asphalt-silver/60 resize-none"
+                placeholder="Tell us a little about your driveway, parking lot, or project."
+                required
               />
             </div>
-          </div>
+
+            <div className="pt-2">
+              <button
+                type="submit"
+                className="w-full sm:w-auto inline-flex justify-center items-center px-6 py-3.5 rounded-lg bg-asphalt-silver text-asphalt-black font-semibold text-sm sm:text-base hover:bg-white transition-all active:scale-[0.98] touch-manipulation"
+              >
+                Send message
+              </button>
+              <p className="mt-2 text-xs text-gray-500">
+                This form is for collecting your info. Response times may vary based on workload and season.
+              </p>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -206,7 +321,6 @@ export default function App() {
       <Hero />
       <Services />
       <Contact />
-      <FacebookFeed />
       <Footer />
     </>
   )
